@@ -5,6 +5,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NewThoughtsComponent } from './components/thoughts/new-thoughts/new-thoughts.component';
+import { ListThoughtsComponent } from './components/thoughts/list-thoughts/list-thoughts.component';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ import { NewThoughtsComponent } from './components/thoughts/new-thoughts/new-tho
     RouterOutlet,
     HeaderComponent,
     FooterComponent,
-    NewThoughtsComponent
+    NewThoughtsComponent,
+    ListThoughtsComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

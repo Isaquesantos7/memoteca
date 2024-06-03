@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-new-thoughts',
   standalone: true,
-  imports: [FormsModule],
+  imports: [
+    FormsModule,
+    RouterLink
+  ],
   templateUrl: './new-thoughts.component.html',
   styleUrl: './new-thoughts.component.css'
 })
