@@ -21,4 +21,16 @@ export class ThoughtService {
 
     return this.http.post<Thought>(this.url, thought);
   }
+
+  removeTought(id: number): Observable<Thought> {
+    const url: string = `${this.url}/${id}`;
+
+    return this.http.delete<Thought>(url);
+  }
+
+  findById(id: number): Observable<Thought> {
+    const url: string = `${this.url}/${id}`;
+
+    return this.http.get<Thought>(url);
+  }
 }
