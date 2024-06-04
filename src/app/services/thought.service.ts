@@ -13,6 +13,12 @@ export class ThoughtService {
   constructor(private http: HttpClient) { }
 
   getAllThought() : Observable<Thought[]> {
+    
     return this.http.get<Thought[]>(this.url);
+  }
+
+  saveThought(thought: Thought): Observable<Thought> {
+
+    return this.http.post<Thought>(this.url, thought);
   }
 }

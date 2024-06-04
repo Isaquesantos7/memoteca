@@ -13,9 +13,9 @@ import { Thought } from '../../../Thought';
 export class ToughtsComponent {
   @Input() pensamento: Thought = {
     id: 0,
-    conteudo: 'I love angular',
-    autor: 'Isaquesantos7',
-    modelo: 'modelo3'
+    conteudo: '',
+    autor: '',
+    modelo: ''
   }
 
   larguraPensamento(): string {

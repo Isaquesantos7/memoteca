@@ -1,14 +1,18 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
 import { Thought } from '../../../Thought';
+
+import { FormBuilder } from '@angular/forms';
+import { ThoughtService } from '../../../services/thought.service';
 
 @Component({
   selector: 'app-new-thoughts',
   standalone: true,
   imports: [
     FormsModule,
-    RouterLink
+    RouterLink,
+    ReactiveFormsModule
   ],
   templateUrl: './new-thoughts.component.html',
   styleUrl: './new-thoughts.component.css'
@@ -16,17 +20,23 @@ import { Thought } from '../../../Thought';
 
 export class NewThoughtsComponent {
   protected pensamento: Thought = {
-    id: 1,
-    conteudo: 'Pense que hoje eu pensei muito!',
-    autor: 'Isaquesantos7',
-    modelo: 'modelo-1'
+    conteudo: '',
+    autor: '',
+    modelo: ''
   }
 
+  constructor (
+    private thought: ThoughtService,
+    private router: Router
+  ) {}
+
   salvar() {
-    alert("Dados Salvo!");
+    this.thought.saveThought(this.pensamento).subscribe(() => {
+      this.router.navigate(['list-thought']);
+    });    
   }
 
   cancelar() {
-    alert("Envio cancelado!");
+    this.router.navigate(['list-thought']);
   }
 }
