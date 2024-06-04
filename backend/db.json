@@ -14,9 +14,9 @@
     },
     {
       "id": "3",
-      "conteudo": "Passo informações para o componente filho",
-      "autor": "Componente pai",
-      "modelo": "modelo1"
+      "conteudo": "Passo informações para o componente filho e o pai tambem",
+      "autor": "Componente pai hehe",
+      "modelo": "modelo2"
     },
     {
       "id": "4",

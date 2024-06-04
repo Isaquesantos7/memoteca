@@ -3,7 +3,6 @@ import { FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { Thought } from '../../../Thought';
 
-import { FormBuilder } from '@angular/forms';
 import { ThoughtService } from '../../../services/thought.service';
 
 @Component({

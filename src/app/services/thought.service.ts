@@ -28,6 +28,12 @@ export class ThoughtService {
     return this.http.delete<Thought>(url);
   }
 
+  editTought(thought: Thought): Observable<Thought> {
+    const url: string = `${this.url}/${thought.id}`;
+
+    return this.http.put<Thought>(url, thought);
+  }
+
   findById(id: number): Observable<Thought> {
     const url: string = `${this.url}/${id}`;
 
