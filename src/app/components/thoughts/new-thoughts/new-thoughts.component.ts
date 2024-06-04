@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { Thought } from '../../../Thought';
 
 @Component({
   selector: 'app-new-thoughts',
@@ -14,8 +15,8 @@ import { RouterLink } from '@angular/router';
 })
 
 export class NewThoughtsComponent {
-  protected pensamento = {
-    id: '1',
+  protected pensamento: Thought = {
+    id: 1,
     conteudo: 'Pense que hoje eu pensei muito!',
     autor: 'Isaquesantos7',
     modelo: 'modelo-1'
