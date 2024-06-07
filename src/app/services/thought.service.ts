@@ -8,7 +8,7 @@ import { Thought } from '../Thought';
   providedIn: 'root'
 })
 export class ThoughtService {
-  private url = 'http://localhost:3000/pensamentos';
+  private url = 'http://localhost:8080/api/pensamentos';
 
   constructor(private http: HttpClient) { }
 
